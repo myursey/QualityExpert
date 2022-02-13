@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Anton\\source\\repos\\QE\\Case2.csproj",
+      "projectUniqueName": "C:\\Users\\Anton\\Desktop\\Q\\QualityExpert\\Case2.csproj",
       "projectName": "Case2",
-      "projectPath": "C:\\Users\\Anton\\source\\repos\\QE\\Case2.csproj",
+      "projectPath": "C:\\Users\\Anton\\Desktop\\Q\\QualityExpert\\Case2.csproj",
       "packagesPath": "C:\\Users\\Anton\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Anton\\source\\repos\\QE\\obj\\",
+      "outputPath": "C:\\Users\\Anton\\Desktop\\Q\\QualityExpert\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Anton\\AppData\\Roaming\\NuGet\\NuGet.Config",

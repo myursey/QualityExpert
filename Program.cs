@@ -2,43 +2,47 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Мending_machine
+namespace ConsoleApp1
 {
     class Program
     {
-        static List<double> Aoo(ref double change, double cash, List<double> list)
-        {
-            if (change - cash >= 0)
-            {
-                list.Add(cash);
-                change -= cash;
-                Aoo(ref change, cash, list);
-                return list;
-            }
-            Console.Write($"{list[0]} руб: {list.Count()}шт.,");
-            return list;
-        }
-        static void Foo(double price, double money)
-        {
-            double change = money - price;
-            double[] Cash = { 5000, 2000, 1000, 500, 200, 100, 50, 10, 5, 2, 1 };
-            var listCash = new List<double>();
-            for (int i = 0; i < Cash.Length; i++)
-            {
-                if (change >= Cash[i])
-                {
-                    listCash = Aoo(ref change, Cash[i], listCash);
-
-                }
-                listCash.Clear();
-            }
-        }
         static void Main(string[] args)
         {
-            var price = 21;
-            var money = 50;
-            Foo(price, money);
+            var arr = new int[] { -1,1,2,-3,3 };
+            Console.WriteLine(GetPairsCount(arr));
+        }
+
+        private static int GetPairsCount(int[] arr)
+        {
+            var counter = 0;
+
+            var list = arr.ToList();
+            list.Sort();
+
+            while (list.Count > 1)
+            {
+                var a = list.First();
+                list.Remove(a);
+                var b = list.First();
+
+                if (a == b
+                    || a + 1 == b
+                    || a + 2 == b
+                    || a - 1 == b
+                    || a - 2 == b)
+                {
+                    list.Remove(b);
+                }
+
+                ++counter;
+            }
+
+            if (list.Count == 1)
+            {
+                ++counter;
+            }
+
+            return counter;
         }
     }
 }
-
